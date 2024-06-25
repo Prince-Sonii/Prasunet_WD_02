@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickTock Timer</title>
+    <link rel="stylesheet" href="stopWatch.css">
+</head>
+<body>
+    <!-- navbar -->
+     <nav>
+        <div class="navbar" id="nav_night_mode">
+            <div class="logo_name">
+                <h3 class="logo_text">TICK TOCK TIMER</h3>
+            </div>
+            <div class="night_btn" id="night_btn_parent">
+                <button id="night_mode_btn"><i class="fa-solid fa-moon fa-xl" id></i></button>
+                 <!-- <i class="fa-regular fa-moon" id></i> -->
+            </div>
+        </div>
+        <div class="line_gap">
+            <!-- for the line margin just below the navbar -->
+        </div>
+     </nav>
+    <section class="container">
+        <div class="item_container" id="clock_night_mode">
+            <div class="clock">
+                <div class="hour box">
+                    <p id="hours" class="time_text">00</p>
+                </div>
+                <div class="min box">
+                    <p id="mins" class="time_text">00</p>
+                </div>
+                <div class="sec box">
+                    <p id="secs" class="time_text">00</p>
+                </div>
+                <div class="msec box">
+                    <p id="millisecs" class="time_text" style="font-size: 60px;">00</p>
+                </div>
+            </div>
+            <div class="button_container">
+                <button class="btn" id="stop">STOP</button>
+                <button class="btn" id="reset">RESET</button>
+                <button class="btn" id="start">START</button>
+            </div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="stopWatch.js"></script>
+</body>
+</html>
