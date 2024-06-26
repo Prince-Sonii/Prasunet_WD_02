@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color:#66a1a4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background: linear-gradient(90deg, #cdffd8, #51b2a6);
+
+}
+.navbar_night_mode {
+    background:linear-gradient(90deg,#090909, #7d7d7d) ;
+}
+.logo_text {
+    font-size: 28px;
+    color: #b88857;
+}
+.night_btn {
+    width: 20px;
+    padding: 3px;
+    border: 3px solid #000000;
+    border-radius: 100%;
+}
+.night_btn_night_mode {
+    border: 3px solid #b8f2e3;
+}
+#night_mode_btn:hover {
+    cursor: pointer;
+}
+#night_mode_btn {
+    width: 100%;
+    padding: 3px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+}
+.color_change {
+    background: #252525;
+}
+.line_gap {
+    background-color: #b88857;
+    padding: 3px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.item_container {
+    background-color: #e6e5e2;
+    margin: 90px auto;
+    margin-bottom: 0px;
+    padding: 0px 300px;
+    border: 10px solid #b88857;
+    border-radius: 100px;
+}
+.item_con_night_mode {
+    background-color:#737373;
+    border: 10px solid #000000;
+}
+.time_img {
+    width: 100px;
+}
+
+.imageNum {
+    width: 100%;
+}
+
+.clock {
+    display: flex;
+    padding: 110px 0px;
+    justify-content: center;
+    align-items: baseline;
+
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    width:170px;
+    padding: 15px 5px;
+    height: 150px;
+    border: 7px solid #b88857;
+    border-radius: 30px;
+}
+.msec {
+    transform: scale(.5);
+    margin-left: 1px;
+}
+.box_night_mode {
+    border: 7px solid #000000;
+}
+.time_text {
+    font-size: 104px;
+    color:#252525;
+}
+
+.nightMode {
+    background:linear-gradient(90deg, #3d3d3d, #3d3d3d);
+}
+.button_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.btn {
+    margin: 0px 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color:#d9d9d9;
+    transition-property: all;
+    transition-duration: 0.4s;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: #dbd8cb;
+    scale: 1.07;
+
+}
