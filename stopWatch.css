@@ -127,3 +127,26 @@ body {
     scale: 1.07;
 
 }
+.lap_card_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.lap_timer {
+    font-size: 28px;
+    color: #dbd8cb;
+    display: flex;
+    flex-direction: column;
+}
+.flex_outer_box {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    
+}
+.d {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    font-size: 28px;
+}
