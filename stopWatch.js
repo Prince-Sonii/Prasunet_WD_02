@@ -1,9 +1,9 @@
 
 // stop watch
 let milliseconds=0;
-let seconds =1;
-let minutes =1;
-let hours =1;
+let seconds =0;
+let minutes =0;
+let hours =0;
 let flag = true;
 let timer_control;
 let millisecsText = document.getElementById("millisecs")
@@ -15,21 +15,18 @@ const startButton = document.getElementById("start")
 startButton.onclick = ()=>{
     if(flag){
         timer_control = setInterval(()=>{
-            millisecsText.innerText = milliseconds++;
-            if(milliseconds==100) {
-                milliseconds=1;
-                // seconds++;
-                secsText.innerText=seconds++; 
-                if(seconds==61) {
-                    seconds=0
-                    secsText.innerText=seconds;
-                    // minutes++
-                    minsText.innerText= minutes++;
-                    if(minutes==61) {
+            millisecsText.innerText = ++milliseconds;
+            if(milliseconds==100) { 
+                milliseconds=0;
+                secsText.innerText=++seconds; 
+                if(seconds==60) {
+                    seconds=0;
+                    secsText.innerText = seconds;
+                    minsText.innerText=++minutes;
+                    if(minutes==60) {
                         minutes=0;
-                        minsText.innerText= minutes++;
-                        // hours++
-                        hoursText.innerText= hours++;
+                        minsText.innerText = minutes;
+                        hoursText.innerText= ++hours;
                     }
                 }
             }
@@ -47,16 +44,38 @@ stopButton.onclick = ()=>{
 const resetButton = document.getElementById("reset");
 resetButton.onclick = ()=>{
     milliseconds=0;
-    seconds=1;
-    minutes=1;
-    hours=1;
+    seconds=0;
+    minutes=0;
+    hours=0;
     millisecsText.innerText="00";
     secsText.innerText="00";
     minsText.innerText="00";
     hoursText.innerText="00";
-    while(laps_container.firstElementChild) {
-        laps_container.firstElementChild.remove();
+    count=1;
+    while(laps.childElementCount>0) {
+        laps.removeChild(laps.firstElementChild)
     }
+}
+// lap button
+let laps_button = document.getElementById("lap")
+let laps = document.getElementById("laps_t")
+let count=1;
+laps_button.onclick = ()=>{
+    // laps.append(hours+":"+minutes+":"+seconds+"/"+milliseconds)
+    const outerBox = document.createElement("div");
+    const newLapCount = document.createElement("div");
+    const newLap = document.createElement("div");
+    // Set its class to lap_timer
+    newLapCount.className += "d";
+    newLap.className += "d";
+    outerBox.className = "flex_outer_box";
+    // Set its text content to the current lap time
+    newLapCount.innerText += `Lap${count++}`;
+    newLap.innerText += `${hours}:${minutes}:${seconds}.${milliseconds}`;
+    // Append the new div to the laps container
+    outerBox.appendChild(newLapCount);
+    outerBox.appendChild(newLap);
+    laps.appendChild(outerBox);
 }
 
 // Night Mode Button
