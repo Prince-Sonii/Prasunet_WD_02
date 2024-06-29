@@ -58,7 +58,8 @@ body {
     background-color: #e6e5e2;
     margin: 90px auto;
     margin-bottom: 0px;
-    padding: 0px 300px;
+    padding: 0px 4vw;
+    /* padding: 0px 300px; */
     border: 10px solid #b88857;
     border-radius: 100px;
 }
